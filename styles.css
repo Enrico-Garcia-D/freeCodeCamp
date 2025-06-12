@@ -187,7 +187,7 @@ iframe {
 }
 
 /*---------------------------@media query----------------------------*/
-@media (min-width: 599px) {
+@media (min-width: 320px) {
   body {
     background-color: #fff;
   }
