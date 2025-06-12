@@ -17,32 +17,32 @@ body {
 #header {
   display: flex;
   position: fixed;
-  height: 50px;
+  height: 10vh;
   width: 100%;
   background-color: aquamarine;
+  z-index: 1;
 }
 
 #header-img {
   display: flex;
   justify-content: flex-start;
-  max-width: 500px;
+  max-width: 20vw;
   height: auto;
   padding: 10px;
 }
 
 #nav-bar {
+  display: flex;
+  align-items: center;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 1.5vw;
   padding: 10px;
 }
 
 ul {
   display: flex;
   flex-direction: row;
-  margin-right: 0px;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 li {
@@ -63,8 +63,9 @@ a:hover {
 }
 
 .container {
-  display: block;
-  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
   height: auto;
   text-align: center;
   justify-content: center;
@@ -73,8 +74,8 @@ a:hover {
 
 #hero h2 {
   font-size: 2.4em;
-  padding: 10px;
-  margin: 10px;
+  padding: 5vw;
+  margin: 5vw;
 }
 
 #form {
@@ -106,18 +107,27 @@ a:hover {
 
 #features {
   display: grid;
-  grid-template-columns: auto;
   height: auto;
   padding: 20px;
   box-sizing: border-box;
   background-color: antiquewhite;
 }
 
-iframe {
-  height: 400px;
-  max-width: 700px;
+#how-it-works{
+  display: block;
+  position: relative;
+  height: 80vh;
+  width: 70%;
   margin: auto;
-  overflow: hidden;
+ margin-top: 50px;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 1px solid #000;
 }
 
@@ -177,7 +187,7 @@ iframe {
 }
 
 /*---------------------------@media query----------------------------*/
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   body {
     background-color: #fff;
   }
@@ -185,6 +195,7 @@ iframe {
   #header {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: fit-content;
   }
 
@@ -195,7 +206,10 @@ iframe {
   }
 
   #nav-bar {
+    display: flex;
     flex-direction: column;
+    align-self: center;
+    justify-content: center;
     margin: auto;
   }
 
@@ -210,14 +224,6 @@ iframe {
 
   .container {
     padding-top: 40%;
-  }
-
-  iframe {
-    height: 250px;
-    width: 400px;
-    margin: auto;
-    overflow: hidden;
-    border: 1px solid #000;
   }
 
   #pricing {
